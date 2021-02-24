@@ -58,14 +58,19 @@ function Airplane(name) {
     }
   }
   Person.prototype.poop = function(){
-    
+    return this.stomach = []
 
   }
 
   Person.prototype.toString = function(){
     return (`wassssupppp, my name is ${this.name} and I am ${this.age} years old.holla`)
   }
-   marley.toString()
+
+  marley.eat('grapes')
+  console.log(marley.stomach)
+   console.log(marley.toString())
+   console.log(marley.poop())
+   console.log(marley.stomach)
   
   /*
     TASK 2
@@ -82,9 +87,19 @@ function Airplane(name) {
   */
   
  function Car(model, milesPerGallon) {
-   
-    
+   this.model = model;
+   this.milesPerGallon = milesPerGallon;
+   this.tank = 0;
+   this.odometer = 0;
   }
+
+  Car.prototype.fill = function(gallons){
+    if ( this.tank <= 5){
+      return this.tank += gallons;
+    }
+
+  }
+
   
   
   /*

@@ -108,7 +108,7 @@ function Airplane(name) {
           + Should return a string "Playing with x", x being the favorite toy.
   */
  function Baby(name, age, favoriteToy) {
-   Person.call(this,name, age)
+   Person.call(this, name, age)
    this.favoriteToy = favoriteToy;
 
   }
@@ -127,10 +127,14 @@ function Airplane(name) {
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. if this- is called in a function using the new- keyword then the this- inside that function becomes a new object. only calls that value as a new object from the function.
+
+    2. if apply/call/or bind is used this- becomes the value of the objects that were passed in that function
+
+
+    3. if dot notation is used to perform the fuction, this- becomes the value of what is left of the dot.
+
+    4. if this is declared outside of a function, it becomes part of the global scope or window, and will return an error or undefined if done in 'use strict mode'. we need context to use this-
   */
   
   
